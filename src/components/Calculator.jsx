@@ -14,7 +14,7 @@ const Calculator = () => {
 
   const handleOperatorClick = (op) => {
     if (operator !== null) {
-      handleEqualsClick(); // Realizar la operación pendiente si ya hay un operador
+      handleEqualsClick(); 
     }
     setOperator(op);
     setOperand1(parseFloat(display));
@@ -90,7 +90,7 @@ const Calculator = () => {
     return () => {
       window.removeEventListener('keydown', handleKeyPress);
     };
-  }, []);
+  }, [handleKeyPress]);
 
   return (
     <div className={styles.calculator}>
